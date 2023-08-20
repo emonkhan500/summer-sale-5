@@ -60,10 +60,10 @@
             </h3>
             <div>
               <div
-                class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12"
+                class=" lg:max-w-screen-xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12"
               >
                 <!-- card1 -->
-                <div class="card w-96 shadow-xl bg-base-100">
+                <div onclick="cardclick(this)" class="card w-96 shadow-xl bg-base-100">
                   <figure class="mt6">
                     <img
                       src="./images/prod1.png"
@@ -100,12 +100,12 @@
                         class="mask mask-star-2 bg-orange-400"
                       />
                     </div>
-                    <h2 class="card-title">K. Accessories</h2>
-                    <p><span>39.00</span> TK</p>
+                    <h2 class="card-title">spoon</h2>
+                    <p>39.00 TK</p>
                   </div>
                 </div>
                 <!-- card2 -->
-                <div class="card w-96 shadow-xl bg-base-100">
+                <div onclick="cardclick(this)" class="card w-96 shadow-xl bg-base-100">
                   <figure class="mt6">
                     <img
                       src="./images/prod3.png"
@@ -113,7 +113,7 @@
                       class="rounded-xl px28 py-14"
                     />
                   </figure>
-                  <div class="items-center text-center card-body">
+                  <div  class="items-center text-center card-body">
                     <div class="rating">
                       <input
                         type="radio"
@@ -142,12 +142,12 @@
                         class="mask mask-star-2 bg-orange-400"
                       />
                     </div>
-                    <h2 class="card-title">K. Accessories</h2>
-                    <p><span>49.00</span> TK</p>
+                    <h2 class="card-title"> cooker</h2>
+                    <p>49.00 TK</p>
                   </div>
                 </div>
                 <!-- card3 -->
-                <div class="card w-96 shadow-xl bg-base-100">
+                <div onclick="cardclick(this)" class="card w-96 shadow-xl bg-base-100">
                   <figure class="mt6">
                     <img
                       src="./images/prod2.png"
@@ -155,7 +155,7 @@
                       class="rounded-xl px28 py-14"
                     />
                   </figure>
-                  <div class="items-center text-center card-body">
+                  <div  class="items-center text-center card-body">
                     <div class="rating">
                       <input
                         type="radio"
@@ -184,8 +184,8 @@
                         class="mask mask-star-2 bg-orange-400"
                       />
                     </div>
-                    <h2 class="card-title">K. Accessories</h2>
-                    <p><span>25.00</span> TK</p>
+                    <h2 class="card-title">Accessories</h2>
+                    <p>25.00 TK</p>
                   </div>
                 </div>
               </div>
@@ -200,10 +200,10 @@
             </h3>
             <div>
               <div
-                class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12"
+                class=" max-w-screen-xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12"
               >
                 <!-- card4 -->
-                <div class="card w-96 shadow-xl bg-base-100">
+                <div onclick="cardclick(this)" class="card w-96 shadow-xl bg-base-100">
                   <figure class="mt6">
                     <img
                       src="./images/prod4.png"
@@ -241,11 +241,11 @@
                       />
                     </div>
                     <h2 class="card-title">Sports Back Cap</h2>
-                    <p><span>49.00</span> TK</p>
+                    <p>49.00 TK</p>
                   </div>
                 </div>
                 <!-- card5 -->
-                <div class="card w-96 shadow-xl bg-base-100">
+                <div onclick="cardclick(this)" class="card w-96 shadow-xl bg-base-100">
                   <figure class="mt6">
                     <img
                       src="./images/prod5.png"
@@ -283,11 +283,11 @@
                       />
                     </div>
                     <h2 class="card-title">Full Jersey Set</h2>
-                    <p><span>69.00</span> TK</p>
+                    <p>69.00 TK</p>
                   </div>
                 </div>
                 <!-- card6 -->
-                <div class="card w-96 shadow-xl bg-base-100">
+                <div onclick="cardclick(this)" class="card w-96 shadow-xl bg-base-100">
                   <figure class="mt6">
                     <img
                       src="./images/prod6.png"
@@ -339,48 +339,39 @@
             <div class="p-4 rounded-lg mb8 shadow-xl abs">
               <h3 class="font-medium text-2xl">Have coupon?</h3>
               <div class="flex">
-                <input
+                <input id="coupon"
                   type="text"
                   placeholder="  Coupon code"
                   class="border rounded"
                 />
-                <button
-                  class="btn-colour text-white rounded font-bold text-center py-3 px-4"
+                <button disabled id="apply-btn"
+                  class="disabled:bg-gray-300 btn-colour text-white rounded font-bold text-center py-3 px-4"
                 >
                   Apply
                 </button>
               </div>
             </div>
-            <div class="pl-4">
-              <h3>cates</h3>
-              <h3>cates</h3>
-              <h3>cates</h3>
-              <h3>cates</h3>
-              <h3>cates</h3>
-              <h3>cates</h3>
-              <h3>cates</h3>
-              <h3>cates</h3>
-              <h3>cates</h3>
-              <h3>cates</h3>
-            </div>
+            <ol class="pl-7 mt-4 selected-product list-decimal font-bold" id="selected-product">
+              
+            </ol>
             <div class="text-xl rounded-lg p-8 shadow-xl relative">
               <hr />
               <h3>
-                <span class="font-bold">Total price:</span> <span>257.00</span
+                <span  class="font-bold">Total price:</span> <span id="total-product-price">00.00</span
                 ><span>TK</span>
               </h3>
               <h3>
-                <span class="font-bold">discount:</span> <span>51.40</span
+                <span class="font-bold">Discount:</span> <span id="discount">00.00</span
                 ><span>TK</span>
               </h3>
               <h3>
-                <span class="font-bold">Total:</span> <span>205.60</span
+                <span class="font-bold">Total:</span> <span id="after-discount">00.00</span
                 ><span>TK</span>
               </h3>
             </div>
             <div class="absulute">
-              <button
-                class="btn-colour text-white text-2xl font-semibold rounded-lg py-4 px-10 ml-6 mb-4 mt-5%"
+              <button disabled id="purchaxe-btn"
+                class="disabled:bg-gray-300 btn-colour text-white text-2xl font-semibold rounded-lg py-4 px-10 ml-6 mb-4 mt-5%"
               >
                 Make Purchase
               </button>
@@ -389,6 +380,6 @@
         </div>
       </div>
     </main>
-    <script src="js/summer.js"></script>
+    <script src="js/product.js"></script>
   </body>
 </html>
