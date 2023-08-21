@@ -336,7 +336,7 @@
         <!-- total calulation -->
         <div class="w-[342px] ml-6 mt-20 pl-5">
           <div>
-            <div class="p-4 rounded-lg mb8 shadow-xl abs">
+            <div class="p-4 rounded-lg mb8 shadow-xl ">
               <h3 class="font-medium text-2xl">Have coupon?</h3>
               <div class="flex">
                 <input id="coupon"
@@ -369,12 +369,25 @@
                 ><span>TK</span>
               </h3>
             </div>
-            <div class="absulute">
-              <button disabled id="purchaxe-btn"
-                class="disabled:bg-gray-300 btn-colour text-white text-2xl font-semibold rounded-lg py-4 px-10 ml-6 mb-4 mt-5%"
-              >
-                Make Purchase
-              </button>
+            <div class="absulute"><!-- Open the modal using ID.showModal() method -->
+              <button disabled id="purchaxe-btn" class="disabled:bg-gray-300 btn-colour text-white text-2xl font-semibold rounded-lg py-4 px-10 ml-6 mb-4 mt-5%" onclick="my_modal_1.showModal()"> Make Purchase</button>
+              <dialog id="my_modal_1" class="modal">
+                <form method="dialog" class="modal-box">
+                  <div class="flex flex-col justify-center items-center">
+                   <div>
+                    <img class="items-center" src="./images/congo.png" alt="">
+                    <h1 class="font-bold text-lg mt-4  mb-4">Congratulations!</h1>
+                    <p >Your Purchase the product</p>
+                   </div>
+                  <div >
+                  
+                    <button id="go-home-btn" class=" items-center btn-colour rounded-xl py-3 px-3 mt-3 text-white">GO HOME</button>
+                  </div>
+                  </div>
+                </form>
+              </dialog>
+              
+                
             </div>
           </div>
         </div>

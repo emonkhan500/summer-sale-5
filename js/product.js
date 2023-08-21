@@ -16,6 +16,8 @@ function cardclick(target) {
   total = parseFloat(total) + parseFloat(productPrice);
   document.getElementById("total-product-price").innerText = total;
   document.getElementById("after-discount").innerText = total.toFixed(2);
+  
+  
 
   // btn enable
   if (total > 0) {
@@ -42,5 +44,12 @@ document.getElementById("apply-btn").addEventListener("click", function () {
     const lastTotal = totalPrice - discountPrice;
     document.getElementById("after-discount").innerText = lastTotal.toFixed(2);
   }
-  document.getElementById("coupon").value = '';
+  
 });
+
+document.getElementById('go-home-btn').addEventListener('click',function(){
+  document.getElementById("coupon").value = '';
+   document.getElementById("total-product-price").innerText = '00.00';
+   document.getElementById("after-discount").innerText = '00.00';
+   document.getElementById('discount').innerText = '00.00';
+ })
