@@ -52,4 +52,5 @@ document.getElementById('go-home-btn').addEventListener('click',function(){
    document.getElementById("total-product-price").innerText = '00.00';
    document.getElementById("after-discount").innerText = '00.00';
    document.getElementById('discount').innerText = '00.00';
+   document.getElementById("selected-product").innerText ='';
  })
